@@ -1,0 +1,543 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    scroll-behavior: smooth
+
+img
+    pointer-events: none
+    user-select: none
+
+a
+    text-decoration: none
+
+.container
+    max-width: 1120px
+    width: 100%
+    margin: auto
+    &.padd-q
+        padding: 80px 0
+    &.bb-line
+        border-bottom: 1px solid rgba(7, 7, 33, 0.04)
+
+.header-content
+    padding: 24px 0
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 16px
+    border-bottom: 1px solid rgba(7, 7, 33, 0.04)
+    nav
+        display: flex
+        align-items: center
+        justify-content: center
+        a
+            opacity: 0.8
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: 0.3s ease
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            color: #070721
+            line-height: 24px
+            &:hover
+                opacity: 1
+                svg
+                    transform: rotate(45deg)
+            svg
+                margin-left: 4px
+                transition: 0.3s ease
+            &:not(:last-child)
+                margin-right: 32px
+
+    .title
+        display: flex
+        align-items: center
+        justify-content: center
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        text-align: center
+        color: #070721
+        svg
+            margin: 0 16px
+
+.images-block
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    > a
+        margin-top: 32px
+    > .item
+        overflow: hidden
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 16px
+        img
+            width: 30%
+            margin: 0 8px
+
+.info-pay
+    display: flex
+    flex-direction: column
+    &:not(:last-child)
+        margin-bottom: 32px
+    > .title
+        margin-bottom: 8px
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: rgba(7, 7, 33, 0.8)
+    > p
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        color: #070721
+    > a
+        font-style: normal
+        font-weight: 600
+        font-size: 24px
+        line-height: 32px
+        color: #4747FF
+        &:hover
+            text-decoration: underline
+
+.tab-btn
+    margin: -32px 0 32px 0
+    display: flex
+    align-items: center
+    background: #F1F1F9
+    border-radius: 67px
+    width: fit-content
+    padding: 0px 2px
+    > button
+        cursor: pointer
+        margin: 4px 2px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 0 16px
+        height: 36px
+        width: fit-content
+        border-radius: 37px
+        color: rgba(7, 7, 33, 0.8)
+        border: none
+        &.active
+            background: #4747FF
+            color: #fff
+
+
+.tab-content
+    display: none
+    &.active
+        display: flex
+        flex-direction: column
+        
+
+
+.team-block
+    display: grid
+    grid-template-columns: 1fr
+    > h2
+        font-style: normal
+        font-weight: 700
+        font-size: 64px
+        line-height: 64px
+        color: #070721
+        margin-bottom: 16px
+    > p  
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: rgba(7, 7, 33, 0.8)
+        margin-bottom: 32px
+    .items
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 16px
+        .item
+            position: relative
+            aspect-ratio: 1 / 1
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            justify-content: space-between
+            > a
+                margin: 16px
+                width: 32px
+                height: 32px
+                display: flex
+                grid-template-columns: 1fr
+                z-index: 2
+                transition: 0.3s
+                &:hover
+                    transform: scale(1.1)
+                svg
+                    width: 32px
+                    height: 32px
+            .details
+                width: 100%
+                padding: 24px
+                display: grid
+                grid-template-columns: 1fr
+                z-index: 2
+                position: relative
+                background: linear-gradient(180deg, rgba(7, 7, 33, 0) 0%, rgba(7, 7, 33, 0.64) 100%)
+                > .name
+                    font-style: normal
+                    font-weight: 600
+                    font-size: 24px
+                    line-height: 32px
+                    color: #FFFFFF
+                > .role
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 24px
+                    color: rgba(255, 255, 255, 0.8)
+            img
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+
+
+.header-block
+    display: grid
+    grid-template-columns: 1fr
+    overflow: hidden
+
+    background: #E0E0FF
+    border: 1px solid #CCCCFF
+    border-radius: 24px
+    > .details
+        padding: 0px 64px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        border-top: 1px solid #CCCCFF
+        > .item
+            padding: 32px 0
+            display: flex
+            align-items: center
+            svg
+                margin-right: 12px
+                height: 56px
+                width: 56px
+            .di-box
+                display: grid
+                grid-template-columns: 1fr
+                span
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 24px
+                    color: #070721
+                p
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 20px
+                    line-height: 32px
+                    color: #070721
+                
+
+
+    > .top
+        padding: 64px
+        display: flex
+        flex-direction: column
+        background: url('../img/header-q.jpg')
+        background-position: center
+        background-size: cover
+        > .label-info
+            display: flex
+            align-items: center
+            font-style: normal
+            font-weight: 600
+            font-size: 12px
+            line-height: 24px
+            color: #4747FF
+            svg
+                margin-right: 4px
+        h1
+            font-style: normal
+            font-weight: 700
+            font-size: 64px
+            line-height: 64px
+            color: #070721
+            margin: 16px 0
+        p
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 24px
+            color: rgba(7, 7, 33, 0.8)
+            margin-bottom: 40px
+
+.dark-btn-q
+    display: flex
+    align-items: center
+    justify-content: center
+    width: fit-content
+    height: 56px
+    padding: 0px 32px
+    background: #070721
+    border-radius: 67px
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 24px
+    transition: 0.3s ease
+    color: #FFFFFF
+    &:hover
+        opacity: 0.8
+        svg
+            transform: rotate(45deg)
+    svg
+        transition: 0.3s ease
+        margin-left: 12px
+
+.silver-btn-q
+    display: flex
+    align-items: center
+    justify-content: center
+    width: fit-content
+    height: 56px
+    padding: 0px 32px
+    background: rgba(7, 7, 33, 0.04)
+    border-radius: 67px
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 24px
+    transition: 0.3s ease
+    color: #070721
+    backdrop-filter: blur(20px)
+    &:hover
+        opacity: 0.8
+        svg
+            transform: rotate(45deg)
+    svg
+        transition: 0.3s ease
+        margin-left: 12px
+        
+.plan-course
+    display: grid
+    grid-template-columns: 1fr
+    padding: 64px
+    background: #FFFFFF
+    border: 1px solid #E2E2F3
+    border-radius: 24px
+    position: relative
+    > .top-right
+        position: absolute
+        top: -1px
+        right: -1px
+        z-index: 1
+    > h2
+        font-style: normal
+        font-weight: 700
+        font-size: 64px
+        line-height: 64px
+        color: #070721
+        margin-bottom: 16px
+    > p
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: rgba(7, 7, 33, 0.8)
+        margin-bottom: 64px
+    > .list
+        display: grid
+        grid-template-columns: 1fr
+        > .item
+            display: flex
+            &:not(:last-child)
+                margin-bottom: 32px
+                border-bottom: 1px solid rgba(7, 7, 33, 0.04)
+                padding-bottom: 32px
+                
+            span
+                width: 32px
+                height: 32px
+                background: #4747FF
+                border-radius: 32px
+                display: flex
+                align-items: center
+                justify-content: center
+                font-style: normal
+                font-weight: 600
+                font-size: 16px
+                line-height: 32px
+                color: #FFFFFF
+                margin-right: 12px
+            p
+                font-style: normal
+                font-weight: 600
+                font-size: 24px
+                line-height: 32px
+                color: #070721
+
+@media screen and (max-width: 1168px)
+    .container
+        max-width: 976px
+
+@media screen and (max-width: 1022px)
+    .container
+        max-width: 720px
+        &.padd-q
+            padding: 40px 0
+
+    .header-block 
+        > .top
+            padding: 40px
+            background-position: left
+        > .details
+            padding: 0 40px
+            > .item
+                padding: 24px 0
+
+    .images-block 
+        > a
+            margin-top: 16px
+
+    .plan-course
+        padding: 40px
+        > .list 
+            > .item
+                &:not(:last-child)
+                    margin-bottom: 24px
+                    padding-bottom: 24px
+
+    .team-block
+        .items 
+            grid-template-columns: 1fr 1fr 1fr
+            > .item
+                &:nth-child(3)
+                    display: none
+                &:nth-child(8)
+                    display: none
+                    
+@media screen and (max-width: 766px)
+    .top-right
+        display: none
+    .container
+        overflow: hidden
+        padding-left: 24px !important
+        padding-right: 24px !important
+        
+    .header-block 
+        > .top
+            padding: 24px
+        > .details
+            grid-template-columns: 1fr
+            padding: 12px 0
+            > .item
+                padding: 12px 24px
+
+    .header-content 
+        .title
+            margin: 0 -16px
+        nav 
+            a
+                &:not(:last-child) 
+                    margin-right: 16px
+
+    .header-block 
+        > .top 
+            h1    
+                font-size: 40px
+                line-height: 40px
+            p
+                font-size: 14px
+                line-height: 20px
+                margin-bottom: 24px
+                br
+                    display: none
+        > .details 
+            > .item 
+                svg
+                    width: 40px
+                    height: 40px
+                .di-box
+                    span
+                            font-size: 12px
+                            line-height: 16px
+
+    .plan-course 
+        padding: 24px
+        > h2
+            font-size: 40px
+            line-height: 40px
+        > p
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 24px
+            br
+                display: none
+        > .list 
+            > .item 
+                span
+                    flex: none
+                    width: 24px
+                    height: 24px
+                    font-size: 12px
+                p
+                    font-size: 16px
+                    line-height: 24px
+                &:not(:last-child)
+                    margin-bottom: 16px
+                    padding-bottom: 16px
+
+    .team-block 
+        > h2
+            font-size: 40px
+            line-height: 40px
+        > p
+            font-size: 14px
+            line-height: 20px
+            margin-bottom: 24px
+            br
+                display: none
+
+    .info-pay 
+        > .title
+            font-size: 14px
+            margin-bottom: 4px
+
+    .tab-btn 
+        margin: 0px 0 16px 0
+
+    .team-block 
+        .items 
+            .item 
+                .details
+                    padding: 16px
+                    .name
+                        font-size: 16px
+                        line-height: 24px
+                    .role
+                        display: none
+                        font-size: 12px
+                        line-height: 16px
+
+    .team-block
+        .items 
+            grid-template-columns: 1fr 1fr
+            > .item
+                &:nth-child(3)
+                    display: none
+                &:nth-child(8)
+                    display: none
